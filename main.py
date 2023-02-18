@@ -1,29 +1,23 @@
-class food:
-    food = "food"
-    _food = "_food"
-    __food = "__food"
+import random
 
-    def __init__(self):
-        self.water = "water"
-        self._water = "_water"
-        self.__water = "__water"
+class F():
+    def __init__(self, a, b):
+        self.__a = a
+        self.__b = b
 
+    def __in_method(self):
+        self.operacion = random.randint(1, 2)
+        if self.operacion == 1:
+            return self.__a + self.__b
+        else:
+            return self.__a - self.__b
     def printer(self):
-        print(self.food)
-        print(self._food)
-        print(self.__food)
-        print(self.water)
-        print(self._water)
-        print(self.__water)
 
-class printout(food):
-    def hi_printer(self):
-        print(self.food)
-        print(self._food)
-        #print(self.__food)
-        print(self.water)
-        print(self._water)
-        #print(self.__water)
+        print(self.__in_method())
+
+ob = F(10, 15)
+ob.printer()
+
 
 
 # class Great_Grandma:
